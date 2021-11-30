@@ -1,0 +1,35 @@
+<style>
+    table,th,td{border:1px solid black;}
+
+</style>
+<div class="card my-5">
+    <div class="card-body">
+        <div class="table table-borded table-striped">
+         <table style="margin-left: 50px; margin-right: 50px;">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">UrlId</th>
+                    <th scope="col">DateTime</th>
+                    <th scope="col">Agent</th>
+                    <th scope="col">Referer</th>
+                    <th scope="col">UserId</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let statistic of statistics">
+                    <td style="width: 100px;">{{statistic.urlId}}</td>
+                    <td style="width: 100px;">{{statistic.dateTime}}</td>
+                    <td style="width: 200x;">{{statistic.agent}}</td>
+                    <td style="width: 100px;">{{statistic.referer}}</td>
+                    <td style="width: 100px;">{{statistic.userId}}</td>
+
+                </tr>
+            </tbody>
+
+         </table>
+        </div>
+    </div>
+
+</div>
+

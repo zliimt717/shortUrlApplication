@@ -1,0 +1,46 @@
+<div class="card my-5">
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="form-group">
+                <label for="name">Name:&nbsp;</label>
+                <input type="text" [(ngModel)]="url.name" style="width:550px"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Entery the name"
+                  required #name="ngModel"
+                >
+
+            </div>
+           <br>
+            <div class="from-group">
+                <label for="originUrl">LongUrl:&nbsp;</label>
+                <input type="text" style="width: 550px;"
+                  maxlength="255"
+                  [(ngModel)]="url.originUrl"
+                  class="form-control"
+                  id="originUrl"
+                  name="originUrl"
+                  placeholder="Entery the Origin Url"
+                  required #originUrl="ngModel"
+                >
+
+            </div>
+           
+            <br>
+            <div>
+               <label>ShortUrl: &nbsp;</label>
+               <input type="text" style="width:550px" [(ngModel)]="url.shortUrl"
+               class="form-control" 
+               id="shortUrl"
+               name="shorUrl" >
+            </div>
+            <br>
+            <br>
+            <button type="submit" [disabled]="!userForm.form.valid"
+             class="btn btn-info">
+             Submit
+            </button> 
+        </form>
+    </div>
+</div>

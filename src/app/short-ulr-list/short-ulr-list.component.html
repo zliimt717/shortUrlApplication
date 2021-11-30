@@ -1,0 +1,38 @@
+<style>
+    table,th,td{border:1px solid black;}
+
+</style>
+<div class="card my-5">
+    <div class="card-body">
+        <div class="table table-borded table-striped">
+         <table>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Original Url</th>
+                    <th scope="col">Short Url</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Actions</th>
+                    <th scope="col">Statistics</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let url of urls">
+                    <td style="width: 100px;">{{url.name}}</td>
+                    <td style="width: 100px;">{{url.originUrl}}</td>
+                    <td style="width: 100px;">{{"localhost:8080/test/api/"+url.shortUrl}}</td>
+                    <td style="width: 100px;">{{url.creationDate}}</td>
+                    <td><button type="button" class="btn btn-primary" (click)="removeItem(url.id)" style="margin: 15px; background-color: rgb(233, 36, 36);"
+                        >Delete</button></td>
+                    <td><button type="button" class="btn btn-primary"(click)="getStatisticById(url.id)" style="margin: 15px;"
+                        >Statistic</button></td>
+
+                </tr>
+            </tbody>
+
+         </table>
+        </div>
+    </div>
+
+</div>

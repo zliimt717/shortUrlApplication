@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './service/login.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shortUrlClient';
+  title ='login-page-demo';
+  constructor(
+    public login:LoginComponent,
+    public loginSerivce: LoginService
+  ){}
+
+
+  logout(){
+    this.login.logout();
+  }
 }
